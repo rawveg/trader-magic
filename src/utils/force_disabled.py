@@ -1,7 +1,16 @@
-#\!/usr/bin/env python3
+#!/usr/bin/env python3
 import time
 import redis
 import os
+
+# Import version from setup.py
+import sys
+sys.path.insert(0, '..')
+from setup import VERSION
+
+if len(sys.argv) > 1 and sys.argv[1] == '--license':
+    print(f"TraderMagic v{VERSION} - Licensed under AGPL-3.0")
+    sys.exit(0)
 
 def force_trading_disabled():
     """Force trading to be disabled at startup regardless of config settings"""

@@ -66,4 +66,6 @@ TraderMagic is inspired by the work of [Mike Russell and the Creator Magic Commu
 
 ## 📜 License
 
-TraderMagic is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+**Important:** As of March 15, 2025, TraderMagic is licensed under AGPL-3.0. Any forks or derivations must comply with AGPL unless a commercial license is obtained.
+
+TraderMagic is licensed under the GNU Affero General Public License (AGPL). See the [LICENSE](LICENSE) file for details.

@@ -12,6 +12,15 @@ from src.config.settings import config
 
 logger = get_logger("ai_decision_service")
 
+# Import version from setup.py
+import sys
+sys.path.insert(0, '..')
+from setup import VERSION
+
+if len(sys.argv) > 1 and sys.argv[1] == '--license':
+    print(f"TraderMagic v{VERSION} - Licensed under AGPL-3.0")
+    sys.exit(0)
+
 # System prompt for the LLM
 SYSTEM_PROMPT = """
 You are a world expert at stock and cryptocurrency trading.
