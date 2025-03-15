@@ -10,6 +10,15 @@ from src.data_retrieval.taapi_client import taapi_client
 
 logger = get_logger("data_retrieval_service")
 
+# Import version from setup.py
+import sys
+sys.path.insert(0, '..')
+from setup import VERSION
+
+if len(sys.argv) > 1 and sys.argv[1] == '--license':
+    print(f"TraderMagic v{VERSION} - Licensed under AGPL-3.0")
+    sys.exit(0)
+
 class DataRetrievalService:
     def __init__(self):
         self.symbols = config.trading.symbols

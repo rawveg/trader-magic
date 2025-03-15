@@ -8,6 +8,15 @@ from src.utils import get_logger, TradeSignal, TradeResult, redis_client
 
 logger = get_logger("trade_execution_service")
 
+# Import version from setup.py
+import sys
+sys.path.insert(0, '..')
+from setup import VERSION
+
+if len(sys.argv) > 1 and sys.argv[1] == '--license':
+    print(f"TraderMagic v{VERSION} - Licensed under AGPL-3.0")
+    sys.exit(0)
+
 # Import alpaca_client inside the class methods to avoid circular imports
 
 class TradeExecutionService:

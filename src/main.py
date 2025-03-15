@@ -17,6 +17,15 @@ trade_execution_service = TradeExecutionService()
 
 logger = get_logger("main")
 
+# Import version from setup.py
+import sys
+sys.path.insert(0, '..')
+from setup import VERSION
+
+if len(sys.argv) > 1 and sys.argv[1] == '--license':
+    print(f"TraderMagic v{VERSION} - Licensed under AGPL-3.0")
+    sys.exit(0)
+
 # Global flag to control the main loop
 running = True
 
